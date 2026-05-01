@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Privacy Policy - Gym Plus</title>
+    <style>
+        /* Variabili di base (Tema Chiaro - iOS Style) */
+        :root {
+            --bg-color: #F2F2F7; /* Sfondo secondario di iOS */
+            --card-bg: #FFFFFF;
+            --text-primary: #000000;
+            --text-secondary: #8E8E93;
+            --accent-color: #007AFF; /* Blu iOS */
+            --border-color: #E5E5EA;
+        }
+
+        /* Tema Scuro (Dark Mode) automatico */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #000000;
+                --card-bg: #1C1C1E; /* Sfondo schede iOS dark */
+                --text-primary: #FFFFFF;
+                --text-secondary: #EBEBF5;
+                --accent-color: #0A84FF;
+                --border-color: #38383A;
+            }
+        }
+
+        /* Stili Generali */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Contenitore principale a scheda */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px auto;
+                padding: 25px;
+                border-radius: 15px;
+            }
+            body { padding: 10px; }
+        }
+
+        /* Tipografia */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+        }
+
+        .logo-placeholder {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            background-color: var(--accent-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo stilizzato opzionale -->
+        <div class="logo-placeholder">
+            <div class="icon">G+</div>
+        </div>
+
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Ultimo aggiornamento: 1 Maggio 2026</p>
+
+        <p>Benvenuto in <strong>Gym Plus</strong>. Rispettiamo la tua privacy e ci impegniamo a proteggere i tuoi dati personali. Questa informativa spiega come raccogliamo, utilizziamo e proteggiamo le tue informazioni quando utilizzi la nostra applicazione iOS.</p>
+
+        <h2>1. Informazioni che raccogliamo</h2>
+        <p>Per fornirti un'esperienza completa e permetterti di interagire con la community, raccogliamo i seguenti dati:</p>
+        <ul>
+            <li><strong>Dati dell'account:</strong> Indirizzo email, password (criptata) e username forniti in fase di registrazione.</li>
+            <li><strong>Dati del profilo:</strong> Foto profilo, biografia e altre informazioni che decidi di condividere pubblicamente.</li>
+            <li><strong>Dati di allenamento:</strong> Esercizi, serie, ripetizioni, pesi sollevati e durata dei tuoi allenamenti (Workout).</li>
+            <li><strong>Interazioni Sociali:</strong> Mi piace, commenti, follower e utenti seguiti.</li>
+            <li><strong>Dati del dispositivo:</strong> Identificatori del dispositivo necessari per l'invio delle notifiche push.</li>
+        </ul>
+
+        <h2>2. Come utilizziamo i tuoi dati</h2>
+        <p>Utilizziamo le informazioni raccolte esclusivamente per i seguenti scopi:</p>
+        <ul>
+            <li>Consentirti di registrare e monitorare i tuoi progressi in palestra.</li>
+            <li>Mostrare i tuoi allenamenti nel Feed pubblico (se il tuo profilo è impostato come pubblico).</li>
+            <li>Inviarti notifiche push (tramite OneSignal) riguardo a nuovi follower, commenti o mi piace ricevuti.</li>
+            <li>Migliorare e risolvere eventuali bug dell'applicazione.</li>
+        </ul>
+
+        <h2>3. Servizi di Terze Parti</h2>
+        <p>Per far funzionare l'infrastruttura dell'app, ci affidiamo a fornitori di servizi terzi sicuri e certificati:</p>
+        <ul>
+            <li><strong>Supabase:</strong> Utilizziamo Supabase per l'autenticazione degli utenti e come database sicuro per salvare i tuoi allenamenti e i dati social. <a href="https://supabase.com/privacy" target="_blank">Privacy Policy di Supabase</a>.</li>
+            <li><strong>OneSignal:</strong> Utilizziamo OneSignal per gestire l'invio delle notifiche push sul tuo dispositivo Apple. <a href="https://onesignal.com/privacy_policy" target="_blank">Privacy Policy di OneSignal</a>.</li>
+            <li><strong>Apple:</strong> Per l'infrastruttura di base e i servizi cloud di iOS.</li>
+        </ul>
+
+        <h2>4. Sicurezza dei dati</h2>
+        <p>La sicurezza dei tuoi dati è fondamentale per noi. Le password non vengono mai salvate in chiaro ma crittografate dai nostri provider di autenticazione. Le comunicazioni tra l'app e il database avvengono sempre tramite connessioni sicure (HTTPS).</p>
+
+        <h2>5. I tuoi diritti (GDPR)</h2>
+        <p>Hai il diritto in qualsiasi momento di:</p>
+        <ul>
+            <li>Accedere ai tuoi dati personali.</li>
+            <li>Richiedere la modifica o l'aggiornamento dei tuoi dati.</li>
+            <li><strong>Eliminare il tuo account:</strong> Puoi eliminare permanentemente il tuo account e tutti gli allenamenti associati direttamente dalle Impostazioni dell'app.</li>
+            <li>Revocare il consenso per le notifiche push dalle Impostazioni di iOS.</li>
+        </ul>
+
+        <h2>6. Contattaci</h2>
+        <p>Se hai domande, dubbi o segnalazioni riguardo a questa Privacy Policy o al modo in cui trattiamo i tuoi dati, puoi contattarci al seguente indirizzo email:</p>
+        <p><a href="mailto:support@tuodominio.com">support@tuodominio.com</a></p>
+    </div>
+
+</body>
+</html>
