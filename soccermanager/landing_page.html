@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Manager Leagues | Gestisci il tuo calcetto</title>
+    <meta name="description" content="L'app definitiva per organizzare le tue partite di calcetto, gestire le presenze, fare le formazioni e tenere traccia dei risultati.">
+    
+    <!-- Tailwind CSS per lo stile veloce e moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-emerald-200">
+                    ⚽
+                </div>
+                <span class="font-black text-xl tracking-tight text-gray-900 hidden sm:block">Soccer Manager Leagues</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- LINK WEB APP (Header) -->
+                <a href="https://soccermanager.dev" target="_blank" class="hidden md:flex items-center gap-1 text-sm font-bold text-gray-500 hover:text-emerald-600 transition-colors">
+                    <i data-lucide="monitor-smartphone" class="w-4 h-4"></i>
+                    Apri Web App
+                </a>
+                <a href="#download" class="bg-gray-900 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-md active:scale-95">
+                    Scarica l'App
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12 md:gap-20 flex-1">
+        
+        <!-- Testo Sinistra -->
+        <div class="md:w-1/2 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-sm font-bold border border-emerald-100 mb-8">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                Ora disponibile su App Store!
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-6">
+                Il tuo calcetto, <br>
+                finalmente <span class="text-emerald-600">organizzato.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-500 font-medium leading-relaxed max-w-lg mx-auto md:mx-0 mb-8">
+                Basta chat confuse su WhatsApp. Crea la tua lega, convoca i giocatori, fai le formazioni e tieni traccia dei risultati. Tutto in un'unica app.
+            </p>
+            
+            <div class="space-y-6" id="download">
+                <!-- Bottoni Store -->
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                    <!-- App Store (Attivo) -->
+                    <a href="https://apps.apple.com/it/app/soccer-manager-leagues/id6763048666" target="_blank" class="inline-block transition-transform hover:scale-105 active:scale-95 shadow-xl rounded-xl">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/it-it?size=250x83&amp;releaseDate=1711929600" alt="Scarica su App Store" class="h-14">
+                    </a>
+                    
+                    <!-- Google Play (In Arrivo) -->
+                    <div class="relative group cursor-not-allowed">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png" alt="Disponibile su Google Play" class="h-14 opacity-40 grayscale transition-all">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="bg-gray-900/90 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">In arrivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alternativa Web App -->
+                <div class="pt-2 bg-gray-50 rounded-2xl md:bg-transparent">
+                    <p class="text-sm font-medium text-gray-500 mb-2">Non hai un iPhone?</p>
+                    <a href="https://soccermanager.dev" target="_blank" class="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-bold transition-all group p-3 bg-emerald-50 rounded-xl md:bg-transparent md:p-0 md:rounded-none border border-emerald-100 md:border-transparent">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                        Utilizza subito la Web App
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mockup Destra -->
+        <div class="md:w-1/2 flex justify-center w-full">
+            <div class="relative w-[280px] h-[580px] bg-white rounded-[3rem] shadow-2xl border-[10px] border-gray-900 overflow-hidden transform md:rotate-2 hover:rotate-0 transition-transform duration-500">
+                <!-- La tacca dell'iPhone -->
+                <div class="absolute top-0 inset-x-0 h-6 bg-gray-900 w-32 mx-auto rounded-b-2xl z-20"></div>
+                
+                <!-- Schermata finta dell'app -->
+                <div class="absolute inset-0 bg-gray-50 p-4 pt-12 flex flex-col">
+                    <div class="bg-emerald-600 rounded-2xl p-5 text-white shadow-lg mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-200">Prossima Partita</span>
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                        </div>
+                        <h3 class="text-2xl font-black">Giovedì 20:30</h3>
+                        <p class="text-sm font-medium text-emerald-100 flex items-center gap-1 mt-1"><i data-lucide="map-pin" class="w-3 h-3"></i> Campetti Centrali</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex-1">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-gray-400 uppercase">Confermati (10/10)</span>
+                            <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-2 py-1 rounded-md">Completo</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-sm font-bold">1</div>
+                                <div><p class="text-sm font-bold text-gray-800">Raffaele</p></div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-sm font-bold">2</div>
+                                <div><p class="text-sm font-bold text-gray-800">Marco</p></div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-sm font-bold">3</div>
+                                <div><p class="text-sm font-bold text-gray-800">Giuseppe</p></div>
+                            </div>
+                            <div class="flex items-center justify-center pt-4">
+                                <div class="h-[1px] w-full bg-gray-100"></div>
+                            </div>
+                            <div class="flex gap-2">
+                                <div class="flex-1 bg-emerald-500 h-10 rounded-xl flex items-center justify-center text-white font-bold text-xs">Formazioni</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="bg-white py-20 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-gray-900 mb-4">Tutto quello che ti serve per il Match Day</h2>
+                <p class="text-gray-500 font-medium max-w-2xl mx-auto">Gestire la squadra non è mai stato così semplice. Invita i tuoi amici e pensa solo a giocare.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 transition-colors hover:bg-emerald-50 hover:border-emerald-100 group">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="users" class="w-6 h-6 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Gestione Presenze</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Scopri subito chi c'è e chi salta la partita. Niente più foglietti volanti o conti che non tornano in chat.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 transition-colors hover:bg-emerald-50 hover:border-emerald-100 group">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="clipboard-list" class="w-6 h-6 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Formazioni Chiare</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Il manager della lega può dividere le squadre in un attimo e tutti sapranno già con chi giocano prima di arrivare al campo.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 transition-colors hover:bg-emerald-50 hover:border-emerald-100 group">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="trophy" class="w-6 h-6 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Risultati e Pagelle</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Salva lo storico delle partite, inserisci il risultato finale e tieni traccia di chi vince di più nel gruppo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-white">Soccer Manager Leagues</span>
+                <span>© 2026 ProtaDev</span>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="https://soccermanager.dev/privacy-policy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="mailto:support@soccermanager.dev" class="hover:text-white transition-colors">Supporto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inizializza le icone -->
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
