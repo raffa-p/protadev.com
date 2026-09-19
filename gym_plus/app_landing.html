@@ -1,76 +1,245 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="./style/gym_plus_style.css">
-    <title>Gym Plus - La tua nuova community fitness</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym Plus: Fitness Logbook — Allenamento e alimentazione</title>
+<meta name="description" content="Gym Plus unisce il diario degli allenamenti, l'alimentazione e una community di atleti. Gratis su iPhone, iPad e Apple Watch.">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="./style/gym_plus_style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,700;12..96,75..100,800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Navbar -->
-        <nav>
-            <div class="logo">Gym Plus</div>
-            <div class="nav-links">
-                <a href="./privacy_policy.html">Privacy</a>
-                <a href="./terms.html">Termini di Servizio</a>
-                <a href="mailto:support@protadev.com">Supporto</a>
-            </div>
-        </nav>
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <img src="./images/icon_image.png" alt="Logo Gym Plus" style="width: 32px; height: 32px; border-radius: 8px; object-fit: cover;">
+      Gym Plus
+    </a>
+    <div class="nav-links">
+      <a href="#allenamento">Allenamento</a>
+      <a href="#alimentazione">Alimentazione</a>
+      <a href="#community">Community</a>
+      <a href="mailto:support@protadev.com">Supporto</a>
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/it/app/gym-plus-fitness-logbook/id6766520098">Scarica ora</a>
+  </div>
+</nav>
 
-        <!-- Sezione Principale -->
-        <section class="hero">
-            <div class="hero-text">
-                <h1 class="hero-title">Traccia. Condividi.<br><span>Migliorati.</span></h1>
-                <p class="hero-subtitle">La prima app di fitness che unisce il tracciamento dei tuoi allenamenti a una vera community. Segui i tuoi amici, commenta i loro progressi e festeggia i nuovi record insieme.</p>
-                <!-- Bottone finto per l'App Store -->
-                <a href="#" class="download-btn">Scarica sull'App Store</a>
-            </div>
-            
-            <div class="hero-image">
-                <!-- Questo è il finto iPhone. Sostituisci il div interno con:  -->
-                <img src="./images/Screenshot 2026-05-02 (20.33.09).png" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-        </section>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <h1 class="rise"><span>Allenati.</span><span>Mangia meglio.</span><span>Migliorati.</span></h1>
+        <p class="lede rise d1">Gym Plus tiene il conto di serie, carichi e calorie nello stesso posto — e una community che si accorge quando batti un record.</p>
+        <div class="hero-cta rise d2">
+          <a class="" href="https://apps.apple.com/it/app/gym-plus-fitness-logbook/id6766520098"><img src="../app_store_download_button_light.svg" alt="Disponibile sull'App Store"></a>
+          <a class="btn btn-ghost" href="#allenamento">Guarda come funziona</a>
+        </div>
+        <p class="hero-note rise d3">Disponibile per iPhone · Presto anche per Android</p>
+      </div>
 
-        <!-- Sezione Funzionalità -->
-        <section class="features" id="features">
-            <h2 class="section-title">Tutto quello che ti serve in palestra</h2>
-            <div class="features-grid">
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🏋️‍♂️</div>
-                    <h3 class="feature-title">Tracciamento Intuitivo</h3>
-                    <p class="feature-desc">Registra esercizi, serie, ripetizioni e peso. Gym Plus calcola in automatico il volume totale e la durata del tuo workout.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3 class="feature-title">Community Social</h3>
-                    <p class="feature-desc">Metti mi piace agli allenamenti dei tuoi amici e partecipa a discussioni con risposte nidificate ai commenti, proprio come sui grandi social.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔔</div>
-                    <h3 class="feature-title">Notifiche In Tempo Reale</h3>
-                    <p class="feature-desc">Non perderti mai un'interazione. Ricevi notifiche push istantanee quando qualcuno commenta, mette like o inizia a seguirti.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 ProtaDev. Tutti i diritti riservati.</p>
-            <div style="margin-top: 15px;">
-                <!-- Link essenziali per Apple -->
-                <a href="./privacy_policy.html">Privacy Policy</a> | 
-                <a href="./terms.html">Termini di Servizio</a> | 
-                <a href="mailto:support@protadev.com">Contattaci</a>
-            </div>
-        </footer>
+      <div class="device rise d2">
+        <div class="device-frame">
+          <img src="./images/body_score.jpeg" alt="Schermata dell'app Gym Plus">
+        </div>
+        <div class="chip chip-a rise d3">
+          <div class="k">Volume della sessione</div>
+          <div class="v">3.979 kg</div>
+          <div class="spark" aria-hidden="true">
+            <i style="height:34%"></i><i style="height:52%"></i><i style="height:44%"></i>
+            <i style="height:68%"></i><i style="height:60%"></i><i style="height:88%"></i><i style="height:100%"></i>
+          </div>
+        </div>
+        <div class="chip chip-b rise d4">
+          <div class="k">Calorie attive</div>
+          <div class="v">341 kcal</div>
+        </div>
+        <div class="chip chip-c rise d4">
+          <div class="k">Rimanenti oggi</div>
+          <div class="v">2.859 kcal</div>
+        </div>
+      </div>
     </div>
 
+    <dl class="strip rise d4">
+      <div><dt>Ogni serie</dt><dd>Peso, reps, PR</dd></div>
+      <div><dt>Ogni pasto</dt><dd>Kcal e macro</dd></div>
+      <div><dt>Nel tempo</dt><dd>Peso e misure</dd></div>
+      <div><dt>Con gli altri</dt><dd>Feed e commenti</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="allenamento">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Due metà dello stesso obiettivo</h2>
+      <p>La palestra da sola non basta e la dieta da sola nemmeno. Gym Plus le tiene insieme, nella stessa app.</p>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar p-train">
+        <div>
+          <h3>Allenamento</h3>
+          <p>Crea le tue schede, registra la sessione mentre ti alleni e guarda i carichi salire settimana dopo settimana.</p>
+        </div>
+        <ul>
+          <li><i class="tick"></i>Schede personalizzate e storico importabile</li>
+          <li><i class="tick"></i>Volume, durata e record rilevati in automatico</li>
+          <li><i class="tick"></i>Grafico dei progressi per ogni esercizio</li>
+          <li><i class="tick"></i>Registrazione dal polso con Apple Watch</li>
+        </ul>
+        <div class="log log-train" aria-hidden="true">
+          <div class="log-row"><b>Leg curl sdraiato</b><span>3 serie</span></div>
+          <div class="log-row"><b>Squat sumo con manubrio</b><span>3 serie</span></div>
+          <div class="log-row"><b>Panca piana</b><span>4 serie · 80 kg</span></div>
+          <div class="log-foot"><span>48m · 4 record personali</span><b>3.979 kg</b></div>
+        </div>
+      </article>
+
+      <article class="pillar p-food" id="alimentazione">
+        <div>
+          <h3>Alimentazione</h3>
+          <p>Imposta il tuo obiettivo e segui colazione, pranzo e cena con calorie e macro sempre davanti agli occhi.</p>
+        </div>
+        <ul>
+          <li><i class="tick"></i>Percorso guidato in base al tuo obiettivo</li>
+          <li><i class="tick"></i>Diario dei pasti con ricette pronte</li>
+          <li><i class="tick"></i>Andamento del peso e misurazioni corporee</li>
+          <li><i class="tick"></i>Peso e passi sincronizzati con Apple Health</li>
+        </ul>
+        <div class="macro" aria-hidden="true">
+          <svg width="96" height="96" viewBox="0 0 42 42">
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--surface-2)" stroke-width="5"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--food)" stroke-width="5"
+                    stroke-dasharray="43 57" stroke-dashoffset="25" stroke-linecap="round"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--train)" stroke-width="5"
+                    stroke-dasharray="33 67" stroke-dashoffset="-18" stroke-linecap="round"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--energy)" stroke-width="5"
+                    stroke-dasharray="14 86" stroke-dashoffset="-51" stroke-linecap="round"/>
+          </svg>
+          <div class="macro-legend">
+            <span><i style="background:var(--food)"></i><b>Proteine</b> 243 g</span>
+            <span><i style="background:var(--train)"></i><b>Carboidrati</b> 243 g</span>
+            <span><i style="background:var(--energy)"></i><b>Grassi</b> 54 g</span>
+          </div>
+        </div>
+        <div class="log log-food" aria-hidden="true">
+          <div class="log-foot"><span>Rimanenti oggi</span><b>2.859 kcal</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Uno sguardo dentro l'app</h2>
+    </div>
+    <div class="shots" id="galleria">
+      <figure class="shot">
+        <div class="device-frame"><img src="./images/body_score.jpeg" alt="Schermata Home con peso, Body Score, passi e calorie attive"></div>
+        <figcaption><b>Home</b>Peso, Body Score e attività</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="device-frame"><img src="./images/feed.jpeg" alt="Feed social con gli allenamenti degli amici"></div>
+        <figcaption><b>Feed</b>Gli allenamenti dei tuoi amici</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="device-frame"><img src="./images/diario.jpeg" alt="Diario alimentare con riepilogo calorie e macro"></div>
+        <figcaption><b>Diario</b>Calorie e macro del giorno</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="device-frame"><img src="./images/progressi.jpeg" alt="Grafico dell'andamento del peso e obiettivo"></div>
+        <figcaption><b>Progressi</b>Peso e misure nel tempo</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="community">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>E non ti alleni da solo</h2>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--train)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.3-.7L3 21l1.9-5.2A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/>
+          </svg>
+        </div>
+        <h3>Commenti e risposte</h3>
+        <p>Metti like e commenta gli allenamenti dei tuoi amici.</p>
+        <div class="thread" aria-hidden="true">
+          <div class="msg"><span class="who">irene7504</span> 4 PR in una sessione 🏆</div>
+          <div class="msg reply"><span class="who">marco_p</span> mostro, complimenti</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--energy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 8a6 6 0 1 0-12 0c0 6-2.5 7-2.5 7h17S18 14 18 8Z"/><path d="M13.7 20a2 2 0 0 1-3.4 0"/>
+          </svg>
+        </div>
+        <h3>Notifiche in tempo reale</h3>
+        <p>Sai subito quando qualcuno commenta, mette like o inizia a seguirti. Niente si perde nel feed.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--food)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 20V10M12 20V4M18 20v-7"/>
+          </svg>
+        </div>
+        <h3>Record e statistiche</h3>
+        <p>Durata, volume sollevato e record personali finiscono nel post: chi ti segue vede i progressi, non le promesse.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta">
+    <div>
+      <h2>Il primo allenamento inizia oggi</h2>
+      <p>Scarica Gym Plus, crea la tua scheda e imposta il tuo obiettivo in pochi minuti.</p>
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/it/app/gym-plus-fitness-logbook/id6766520098">Scarica sull'App Store</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© 2026 ProtaDev. Tutti i diritti riservati.</span>
+    <div class="foot-links">
+      <a href="./privacy_policy.html">Privacy Policy</a>
+      <a href="./terms.html">Termini di Servizio</a>
+      <a href="mailto:support@protadev.com">Contattaci</a>
+    </div>
+  </div>
+</footer>
+<!---
+<script>
+/* Se uno screenshot della galleria non è ancora stato caricato sul server,
+   nasconde la sua scheda invece di mostrare l'icona di immagine rotta. */
+document.querySelectorAll('.shot img').forEach(function (img) {
+  img.addEventListener('error', function () {
+    var fig = img.closest('.shot');
+    if (fig) fig.style.display = 'none';
+  });
+});
+</script>
+-->
 </body>
 </html>
