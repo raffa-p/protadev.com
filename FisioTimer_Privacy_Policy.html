@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Informativa sulla privacy di FisioTimer: dati trattati, accesso con Google, allenamenti, pubblicità e diritti degli utenti.">
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy — FisioTimer</title>
+  <style>
+    :root{--bg:#09090b;--surface:#141416;--surface2:#1b1b1f;--text:#f4f4f5;--muted:#a1a1aa;--line:#303036;--green:#4ade80;--accent:#baf7ce;--yellow:#facc15;--radius:22px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:98px}
+    body{margin:0;font:16px/1.72 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    body:before{content:"";position:absolute;inset:50px 0 auto 0;height:440px;pointer-events:none;background:radial-gradient(ellipse 55% 65% at 75% 0%,rgba(34,197,94,.105),transparent 76%)}
+    a{color:var(--accent);text-underline-offset:4px;text-decoration-thickness:1px}a:hover{color:white}a:focus-visible{outline:2px solid var(--green);outline-offset:5px;border-radius:3px}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,9,11,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(63,63,70,.55)}
+    .topbar{max-width:1160px;margin:auto;padding:15px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;color:var(--text);font-weight:800;letter-spacing:-.5px;text-decoration:none;font-size:18px}
+    .brand-mark{display:grid;place-items:center;width:37px;height:37px;border-radius:11px;background:#22c55e;color:#06150b;font-size:17px;font-weight:900;letter-spacing:-2px;padding-right:2px}
+    .top-info{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700}
+    .container{max-width:1160px;margin:auto;padding:56px 28px 85px;position:relative}
+    .hero{padding:17px 0 45px;max-width:850px}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--green);text-transform:uppercase;font-size:12px;letter-spacing:.17em;font-weight:800}
+    .eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px rgba(74,222,128,.5)}
+    h1{font-size:clamp(42px,6vw,76px);line-height:1.05;letter-spacing:-.065em;margin:19px 0 19px;font-weight:800}
+    .hero p{color:#b9b9c1;font-size:18px;line-height:1.7;max-width:720px;margin:0 0 22px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{display:inline-block;border:1px solid var(--line);border-radius:100px;padding:7px 13px;background:rgba(255,255,255,.025);color:#c5c5cc;font-size:12px;font-weight:650}
+    .alert{display:flex;gap:14px;align-items:flex-start;margin:3px 0 36px;padding:16px 19px;border-radius:15px;border:1px solid #6e5c1e;background:#29230e;color:#fdf1af;font-size:14px}
+    .alert strong{color:#ffec8e}
+    .alert .symbol{font-size:21px;line-height:1.2}
+    .columns{display:grid;grid-template-columns:245px minmax(0,1fr);gap:65px;align-items:start}
+    aside{position:sticky;top:105px}
+    .toc-title{font-size:11px;letter-spacing:.14em;font-weight:800;color:#71717a;text-transform:uppercase;margin-bottom:18px}
+    aside nav{display:grid;gap:3px}
+    aside nav a{text-decoration:none;color:#a1a1aa;padding:9px 12px;border-left:2px solid #333338;font-size:13px;line-height:1.45;transition:.15s}
+    aside nav a:hover,aside nav a:focus-visible{color:var(--green);border-color:var(--green);background:rgba(74,222,128,.04)}
+    main{min-width:0}
+    section{padding:2px 0 31px;margin-bottom:31px;border-bottom:1px solid var(--line)}
+    section:last-of-type{border:0;margin-bottom:0}
+    h2{font-size:24px;letter-spacing:-.04em;line-height:1.3;margin:0 0 15px;font-weight:760}
+    h2 .num{font-size:12px;letter-spacing:0;color:var(--green);border:1px solid #2d5a38;border-radius:8px;background:#102017;padding:5px 8px;vertical-align:5px;margin-right:11px}
+    h3{font-size:17px;letter-spacing:-.02em;margin:22px 0 8px;color:#fafafa}
+    p{margin:0 0 15px;color:#c1c1c8}
+    ul{padding-left:20px;margin:10px 0 17px;color:#c1c1c8}li{padding-left:4px;margin-bottom:8px}li::marker{color:var(--green)}
+    strong{color:var(--text)}
+    .card{background:linear-gradient(145deg,#1a1a1d,#131316);border:1px solid #34343b;border-radius:var(--radius);padding:24px;margin:18px 0}
+    .card p:last-child{margin-bottom:0}
+    .label{display:block;margin-bottom:7px;color:#9ca3af;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.13em}
+    .placeholder{display:inline-block;color:#ffde86;background:#3c3010;border:1px dashed #b18a28;border-radius:6px;padding:1px 6px;font-weight:700;overflow-wrap:anywhere}
+    .data-row{padding:16px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(135px,1fr) 2fr;gap:20px}
+    .data-row:first-child{border:0;padding-top:0}
+    .data-row:last-child{padding-bottom:0}
+    .data-row strong{font-size:14px}
+    .data-row span:last-child{font-size:14px;color:#b9b9c0}
+    .provider{padding:15px 0;border-top:1px solid var(--line)}.provider:first-of-type{border-top:0}
+    .provider-head{display:flex;justify-content:space-between;gap:18px;align-items:baseline;margin-bottom:5px}.provider-head strong{font-size:16px}.provider-head a{font-size:13px;white-space:nowrap}.provider p{font-size:14px;margin:0}
+    .note{padding:18px 20px;border-radius:14px;background:#15221a;border:1px solid #2b4c35;font-size:14px;color:#cbe8d1;margin:20px 0}
+    .note strong{color:#9af0af}
+    .contact{background:linear-gradient(120deg,rgba(37,99,55,.21),rgba(15,22,16,.8));border:1px solid #315e3c;border-radius:20px;padding:27px;margin-top:22px}
+    .contact a{word-break:break-word}
+    .footer{border-top:1px solid var(--line);margin-top:45px;padding-top:23px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#71717a;font-size:13px}
+    @media(max-width:800px){.columns{display:block}aside{position:static;background:#151518;padding:15px;border-radius:14px;margin-bottom:34px}aside nav{grid-template-columns:1fr 1fr}aside nav a{padding:8px}.container{padding:34px 20px 60px}.topbar{padding:13px 20px}.hero{padding-bottom:26px}.alert{margin-bottom:26px}}
+    @media(max-width:500px){aside nav{grid-template-columns:1fr}.data-row{grid-template-columns:1fr;gap:4px}.provider-head{display:block}.provider-head a{display:block;margin:3px 0}.top-info{display:none}.card{padding:19px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body{background:white;color:black;font-size:12px}body:before,header,aside,.alert{display:none!important}.container{max-width:none;padding:0}.columns{display:block}p,li,.data-row span:last-child{color:#222}h1,h2,h3,strong{color:#000}.card,.contact,.note{background:white;border-color:#aaa}.footer{color:#333}.placeholder{color:black;border:1px solid black;background:white}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <a class="brand" href="#inizio" aria-label="FisioTimer, torna all'inizio"><span class="brand-mark" aria-hidden="true">FT</span><span>FisioTimer</span></a>
+      <span class="top-info">Informativa sulla privacy</span>
+    </div>
+  </header>
+  <div class="container" id="inizio">
+    <div class="hero">
+      <span class="eyebrow">Trasparenza e protezione dei dati</span>
+      <h1>Privacy<br>Policy<span style="color:#4ade80">.</span></h1>
+      <p>Questa informativa spiega quali dati vengono trattati quando utilizzi FisioTimer, perché vengono utilizzati e quali diritti puoi esercitare.</p>
+      <div class="meta"><span class="chip">Applicazione Android e iOS</span><span class="chip">Ultimo aggiornamento: 12 ottobre 2026</span></div>
+    </div>
+
+    <div class="columns">
+      <aside aria-label="Indice dell'informativa">
+        <div class="toc-title">In questa pagina</div>
+        <nav>
+          <a href="#dati">01 · Dati trattati</a>
+          <a href="#finalita">02 · Finalità e basi giuridiche</a>
+          <a href="#accesso">03 · Accesso anonimo e Google</a>
+          <a href="#pubblicita">04 · Annunci pubblicitari</a>
+          <a href="#fornitori">05 · Servizi di terzi</a>
+          <a href="#archiviazione">06 · Memoria locale e trasferimenti</a>
+          <a href="#conservazione">07 · Conservazione</a>
+          <a href="#diritti">08 · Diritti e cancellazione</a>
+          <a href="#modifiche">09 · Aggiornamenti</a>
+        </nav>
+      </aside>
+
+      <main id="contenuto">
+
+        <section id="dati" aria-labelledby="tit-dati">
+          <h2 id="tit-dati"><span class="num">01</span>Quali dati trattiamo</h2>
+          <p>FisioTimer è un'app per impostare e utilizzare timer di allenamento. In relazione alle funzioni utilizzate, possono essere trattati:</p>
+          <ul>
+            <li><strong>Dati di account:</strong> identificativo univoco assegnato da Supabase, informazioni di sessione e stato dell'account, anche quando viene utilizzato l'accesso anonimo.</li>
+            <li><strong>Dati di accesso con Google:</strong> identificativo del provider e informazioni di profilo di base che Google mette a disposizione tramite l'autenticazione, come indirizzo email e nome quando disponibili.</li>
+            <li><strong>Allenamenti:</strong> nomi e parametri dei workout creati dall'utente, tra cui preparazione, lavoro, riposo, cicli e serie.</li>
+            <li><strong>Preferenze:</strong> impostazioni relative a vibrazione, audio e mantenimento dello schermo acceso.</li>
+            <li><strong>Dati tecnici e pubblicitari:</strong> informazioni sul dispositivo e identificativi utilizzati dai servizi pubblicitari o necessari al loro funzionamento, secondo piattaforma, configurazione e consensi applicabili.</li>
+          </ul>
+          <p>I nomi degli allenamenti sono scelti dall'utente. Evita di inserire in questi campi informazioni particolarmente sensibili non necessarie al funzionamento dell'app.</p>
+        </section>
+
+        <section id="finalita" aria-labelledby="tit-finalita">
+          <h2 id="tit-finalita"><span class="num">02</span>Finalità e basi giuridiche</h2>
+          <div class="card">
+            <div class="data-row"><strong>Funzionamento dell'app</strong><span>Creazione della sessione, memorizzazione dei workout e sincronizzazione delle impostazioni. Base giuridica: esecuzione del servizio richiesto (art. 6, par. 1, lett. b, GDPR), ove applicabile.</span></div>
+            <div class="data-row"><strong>Accesso e recupero dell'account</strong><span>Collegamento facoltativo di Google per autenticarsi e ritrovare i dati su più dispositivi. Base giuridica: erogazione della funzionalità richiesta.</span></div>
+            <div class="data-row"><strong>Sicurezza e prevenzione abusi</strong><span>Protezione delle sessioni e del servizio. Base giuridica: legittimo interesse del titolare, ove applicabile e previa valutazione.</span></div>
+            <div class="data-row"><strong>Pubblicità</strong><span>Visualizzazione, eventuale personalizzazione e misurazione degli annunci. La base giuridica dipende dal trattamento; il consenso viene richiesto quando previsto dalle norme applicabili.</span></div>
+            <div class="data-row"><strong>Obblighi di legge</strong><span>Eventuali trattamenti necessari per rispettare obblighi normativi (art. 6, par. 1, lett. c, GDPR).</span></div>
+          </div>
+        </section>
+
+        <section id="accesso" aria-labelledby="tit-accesso">
+          <h2 id="tit-accesso"><span class="num">03</span>Accesso anonimo e Google</h2>
+          <h3>Uso senza registrazione Google</h3>
+          <p>FisioTimer può creare automaticamente un account tecnico anonimo attraverso Supabase Auth. Questo account dispone comunque di un identificativo univoco, che consente di associare allenamenti e preferenze. L'accesso anonimo non significa necessariamente assenza di dati personali.</p>
+          <h3>Collegamento o accesso con Google</h3>
+          <p>Puoi scegliere di collegare un account Google alla sessione anonima oppure accedere a un account Google già esistente. Google gestisce l'autenticazione e comunica a Supabase i dati necessari per identificare l'utente. La password del tuo account Google non viene raccolta dall'app.</p>
+          <h3>Logout e dispositivi</h3>
+          <p>Il logout termina la sessione sul dispositivo. Non elimina automaticamente l'account o i dati salvati nel database. Gli account anonimi non collegati potrebbero non essere recuperabili dopo la perdita della sessione o la disinstallazione dell'app.</p>
+        </section>
+
+        <section id="pubblicita" aria-labelledby="tit-pubblicita">
+          <h2 id="tit-pubblicita"><span class="num">04</span>Pubblicità e identificativi</h2>
+          <p>FisioTimer integra Google AdMob per mostrare annunci pubblicitari. Quando gli annunci sono attivi, Google e gli eventuali partner pubblicitari possono trattare dati tecnici, identificativi del dispositivo e informazioni sulle interazioni con gli annunci per erogazione, misurazione, sicurezza e, ove consentito, personalizzazione.</p>
+          <p>Per informazioni sul trattamento svolto da Google consulta <a href="https://policies.google.com/privacy?hl=it" target="_blank" rel="noopener noreferrer">le Norme sulla privacy di Google</a> e <a href="https://policies.google.com/technologies/partner-sites?hl=it" target="_blank" rel="noopener noreferrer">Come Google utilizza le informazioni</a>.</p>
+        </section>
+
+        <section id="fornitori" aria-labelledby="tit-fornitori">
+          <h2 id="tit-fornitori"><span class="num">05</span>Servizi di terzi</h2>
+          <p>FisioTimer si avvale di fornitori tecnologici per offrire le funzionalità descritte:</p>
+          <div class="card">
+            <div class="provider"><div class="provider-head"><strong>Supabase</strong><a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Informativa del fornitore ↗</a></div><p>Autenticazione, gestione delle sessioni e archiviazione di allenamenti e preferenze nel database.</p></div>
+            <div class="provider"><div class="provider-head"><strong>Google Identity / Google OAuth</strong><a href="https://policies.google.com/privacy?hl=it" target="_blank" rel="noopener noreferrer">Privacy Google ↗</a></div><p>Autenticazione con Google, su scelta dell'utente.</p></div>
+            <div class="provider"><div class="provider-head"><strong>Google AdMob</strong><a href="https://support.google.com/admob/answer/6128543?hl=it" target="_blank" rel="noopener noreferrer">Informazioni AdMob ↗</a></div><p>Gestione e visualizzazione degli annunci pubblicitari, se attivi.</p></div>
+          </div>
+          <p>I fornitori possono trattare alcuni dati secondo i rispettivi ruoli e condizioni contrattuali.</p>
+        </section>
+
+        <section id="archiviazione" aria-labelledby="tit-archiviazione">
+          <h2 id="tit-archiviazione"><span class="num">06</span>Memoria locale e trasferimenti</h2>
+          <h3>Dati salvati sul dispositivo</h3>
+          <p>FisioTimer utilizza la memoria locale dell'applicazione per conservare informazioni necessarie al funzionamento, tra cui sessione di autenticazione, configurazione del timer, ultimo allenamento attivo e preferenze. Questi dati non sono necessariamente equivalenti ai cookie di un sito web, ma costituiscono comunque forme di archiviazione locale.</p>
+          </section>
+
+        <section id="conservazione" aria-labelledby="tit-conservazione">
+          <h2 id="tit-conservazione"><span class="num">07</span>Per quanto tempo conserviamo i dati</h2>
+          <p>I dati dell'account, gli allenamenti e le impostazioni possono essere conservati finché l'account rimane attivo e risultano necessari per erogare il servizio; la semplice disinstallazione dell'app o il logout non eliminano automaticamente i dati dal database.</p>
+          <p>Le richieste di cancellazione vengono valutate ed evase secondo la normativa applicabile, fatti salvi eventuali obblighi di conservazione e i tempi tecnici necessari alla rimozione dai backup.</p>
+        </section>
+
+        <section id="diritti" aria-labelledby="tit-diritti">
+          <h2 id="tit-diritti"><span class="num">08</span>I tuoi diritti e la cancellazione</h2>
+          <p>Nei casi previsti dal GDPR, puoi richiedere accesso, rettifica, cancellazione, limitazione del trattamento, portabilità dei dati e opposizione. Quando il trattamento è basato sul consenso, puoi revocarlo senza pregiudicare la liceità delle operazioni precedenti.</p>
+          <p>Puoi inoltre presentare reclamo all'autorità di controllo competente, in Italia il <a href="https://www.garanteprivacy.it/" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a>.</p>
+          <div class="contact">
+            <span class="label">Contatta il titolare</span>
+            <h3 style="margin-top:0">Hai domande sui tuoi dati?</h3>
+            <p>Per esercitare i tuoi diritti o richiedere la cancellazione dell'account e dei dati associati, scrivi a:</p>
+            <span class="placeholder"><a href="mailto:support.fisiotimer@protadev.com">support.fisiotimer@protadev.com</a></span>
+          </div>
+        </section>
+
+        <section id="modifiche" aria-labelledby="tit-modifiche">
+          <h2 id="tit-modifiche"><span class="num">09</span>Modifiche all'informativa</h2>
+          <p>Questa Privacy Policy potrà essere aggiornata per riflettere nuove funzionalità, modifiche ai fornitori o obblighi di legge. La versione aggiornata sarà disponibile a questo indirizzo, con la relativa data di aggiornamento. Quando previsto, saranno fornite ulteriori comunicazioni agli utenti.</p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 FisioTimer · Privacy Policy</span>
+      <span>Powered by <a href="https://protadev.com">ProtaDev</a></span>
+    </footer>
+  </div>
+</body>
+</html>
