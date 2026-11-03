@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="FisioTimer è il timer a intervalli per i tuoi allenamenti. Personalizza lavoro, riposo, recupero, serie e cicli, con guida vocale. In arrivo su Google Play.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fisiotimer.protadev.com/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="FisioTimer">
+  <meta property="og:title" content="FisioTimer — Ogni secondo. Al tuo ritmo.">
+  <meta property="og:description" content="Il timer a intervalli che segue i tuoi allenamenti. Personalizza le fasi e lasciati guidare dalla voce. In arrivo su Google Play.">
+  <meta property="og:url" content="https://fisiotimer.protadev.com/">
+  <title>FisioTimer — Timer a intervalli per allenamenti | In arrivo su Google Play</title>
+  <style>
+    :root{--bg:#09090b;--panel:#111215;--panel2:#17191b;--border:#282a2e;--ink:#f5f7f6;--muted:#a4a8aa;--green:#4ade80;--red:#fb7185;--yellow:#facc15;--phase-color:#4ade80;--width:1160px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--green);outline-offset:4px}
+    .wrap{width:min(calc(100% - 44px),var(--width));margin-inline:auto}
+    .muted{color:var(--muted)}
+    .nav{height:78px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(9,9,11,.83);backdrop-filter:blur(18px);position:sticky;top:0;z-index:20}
+    .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:inline-flex;align-items:center;gap:11px;font-weight:850;font-size:20px;letter-spacing:-.055em;white-space:nowrap}
+    .brand img{width:38px;height:38px;border-radius:12px}
+    .nav-links{display:flex;align-items:center;gap:29px}
+    .nav-links a{color:#b9bcbf;font-size:13px;font-weight:650;transition:color .2s}
+    .nav-links a:hover{color:white}
+    .nav-tag{display:inline-flex;align-items:center;gap:8px;background:#17251d;border:1px solid #345d3f;color:#a3f1ba;border-radius:100px;padding:10px 14px;font-size:12px;font-weight:750;white-space:nowrap}
+    .nav-tag:before,.eyebrow:before{content:"";width:7px;height:7px;flex:none;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(74,222,128,.1)}
+    .hero{position:relative;isolation:isolate;padding:105px 0 55px;overflow:hidden}
+    .hero:before{content:"";position:absolute;z-index:-1;top:-420px;left:27%;width:1100px;height:960px;background:radial-gradient(ellipse,rgba(33,140,72,.21),rgba(31,91,49,.07) 36%,transparent 68%);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:56px}
+    .eyebrow{display:inline-flex;align-items:center;gap:12px;color:#a5eeb8;font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:850}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(52px,6.5vw,89px);line-height:1.04;letter-spacing:-.075em;margin:24px 0 25px;font-weight:850;max-width:640px}
+    h1 span{display:block;color:var(--green)}
+    .lede{max-width:510px;color:#c6c9cb;font-size:18px;line-height:1.8;margin-bottom:30px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:53px;padding:12px 21px;border-radius:14px;font-size:14px;font-weight:800;transition:transform .2s,background .2s,border-color .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-main{background:var(--green);color:#07110a;box-shadow:0 10px 38px rgba(74,222,128,.14)}
+    .btn-main:hover{background:#83f0a8}
+    .btn-ghost{border:1px solid #42464a;color:#edf1ee;background:#ffffff06}
+    .btn-ghost:hover{background:#ffffff12;border-color:#747a77}
+    .btn svg{width:19px;height:19px;flex:none}
+    .availability{display:flex;align-items:center;gap:9px;color:#b3b8b7;font-size:13px;margin-top:19px}
+    .availability svg{width:17px;height:17px;fill:#c8ccc9}
+    .hero-art{position:relative;display:flex;justify-content:center;align-items:center;min-height:620px}
+    .orb{position:absolute;z-index:-1;width:475px;max-width:100%;aspect-ratio:1;border:1px solid rgba(74,222,128,.11);border-radius:50%;box-shadow:0 0 0 55px rgba(74,222,128,.025),0 0 0 110px rgba(74,222,128,.015);background:radial-gradient(circle,rgba(74,222,128,.10),transparent 63%)}
+    .device{width:288px;min-height:574px;padding:9px;background:linear-gradient(135deg,#555b59,#25292a 32%,#555a56 55%,#171b19);border-radius:46px;box-shadow:0 44px 90px rgba(0,0,0,.53),0 0 90px rgba(74,222,128,.08);transform:rotate(-5deg)}
+    .screen{border:1px solid #2e3430;border-radius:39px;height:556px;background:radial-gradient(ellipse at 50% 34%,rgba(37,89,52,.17),transparent 62%),#090b0a;padding:32px 17px 21px;position:relative;overflow:hidden;text-align:center}
+    .camera{position:absolute;width:86px;height:24px;border-radius:0 0 16px 16px;background:#050605;top:0;left:calc(50% - 43px)}
+    .screen-header{text-align:left;display:flex;align-items:center;justify-content:space-between;font-size:10px;font-weight:800;color:#b1b6b2;letter-spacing:.07em}
+    .screen-header span:last-child{font-size:16px;font-weight:500}
+    .workout-name{font-size:19px;font-weight:800;letter-spacing:-.04em;margin:49px 0 5px}
+    .workout-detail{color:#8a958f;font-size:11px}
+    .timer-ring{height:212px;width:212px;border-radius:50%;margin:30px auto 24px;padding:11px;background:conic-gradient(var(--phase-color) 0 72%,rgba(255,255,255,.075) 72% 100%);box-shadow:0 0 46px color-mix(in srgb,var(--phase-color),transparent 86%);transition:background .25s,box-shadow .25s}
+    .ring-inner{background:radial-gradient(circle,#151a17 0,#0a0e0b 76%);border:8px solid #121a14;width:100%;height:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .time{font-weight:850;font-size:50px;line-height:1.1;letter-spacing:-.065em;font-variant-numeric:tabular-nums}
+    .phase-name{font-size:10px;letter-spacing:.15em;color:var(--phase-color);font-weight:850;margin-top:11px;transition:color .25s}
+    .screen-progress{display:flex;gap:6px;margin:26px 0 20px}
+    .screen-progress span{height:5px;border-radius:10px;flex:1;background:#26302a}
+    .screen-progress span:nth-child(-n+2){background:var(--phase-color)}
+    .mock-controls{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:21px}
+    .mock-controls .small{width:36px;height:36px;border:1px solid #313a34;border-radius:50%;display:grid;place-items:center;color:#a8b0a9;font-size:15px}
+    .mock-controls .play{width:57px;height:57px;border-radius:50%;display:grid;place-items:center;background:var(--phase-color);color:#051008;box-shadow:0 6px 24px color-mix(in srgb,var(--phase-color),transparent 78%);transition:background .25s}
+    .float-card{position:absolute;background:rgba(24,28,26,.95);border:1px solid #3d4740;border-radius:17px;padding:13px 16px;box-shadow:0 22px 50px rgba(0,0,0,.32);backdrop-filter:blur(14px)}
+    .float-card strong{display:block;color:white;font-size:13px;font-weight:800}.float-card small{color:#aeb8b0;font-size:11px}
+    .card-voice{top:145px;left:0;display:flex;gap:11px;align-items:center;transform:rotate(6deg)}
+    .card-voice .ic{width:35px;height:35px;border-radius:11px;background:#1d4930;color:var(--green);display:grid;place-items:center}
+    .card-voice svg{width:19px;height:19px}
+    .card-recovery{bottom:117px;right:0;transform:rotate(6deg)}
+    .card-recovery .dot{width:8px;height:8px;background:var(--yellow);border-radius:50%;display:inline-block;margin-right:5px}
+    .preview-label{position:absolute;bottom:5px;left:50%;transform:translateX(-50%);font-size:11px;color:#7b827f;white-space:nowrap}
+    .strip{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);background:rgba(24,25,27,.76);border-radius:19px;overflow:hidden;margin:22px 0 15px}
+    .strip-item{padding:22px 29px;display:flex;gap:14px;align-items:center}
+    .strip-item:not(:last-child){border-right:1px solid var(--border)}
+    .phase-dot{width:11px;height:11px;border-radius:50%;box-shadow:0 0 0 6px rgba(255,255,255,.025);flex:none}
+    .strip strong{display:block;font-size:14px}.strip p{font-size:12px;color:#92999a;margin:2px 0 0}
+    .section{padding:106px 0}.section.alt{background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
+    .section-head{max-width:690px;margin-bottom:45px}
+    .kicker{color:var(--green);text-transform:uppercase;letter-spacing:.17em;font-size:11px;font-weight:850;margin-bottom:13px}
+    h2{font-size:clamp(35px,4.4vw,55px);line-height:1.13;letter-spacing:-.055em;font-weight:850;margin-bottom:18px}
+    .section-head p:last-child{color:#aeb5b2;font-size:16px;line-height:1.8;margin:0}
+    .features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+    .feature{background:linear-gradient(150deg,rgba(255,255,255,.045),rgba(255,255,255,.008));border:1px solid #2a2f2c;border-radius:23px;padding:31px;min-height:228px;transition:transform .2s,border-color .2s}
+    .feature:hover{transform:translateY(-3px);border-color:#426247}
+    .feature-icon{width:45px;height:45px;border-radius:13px;display:grid;place-items:center;background:#1c3b27;color:var(--green);margin-bottom:22px}
+    .feature-icon svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .feature h3{font-size:19px;letter-spacing:-.025em;margin:0 0 10px}
+    .feature p{color:#a8b1ac;line-height:1.75;font-size:14px;max-width:430px;margin:0}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .step{padding:28px 24px;background:#131517;border:1px solid #2b302d;border-radius:21px;position:relative}
+    .step-number{color:#6dcf91;font-size:12px;letter-spacing:.12em;font-weight:850;margin-bottom:45px}
+    .step h3{font-size:20px;letter-spacing:-.03em;margin:0 0 10px}
+    .step p{color:#a5aeaa;font-size:14px;line-height:1.75;margin:0}
+    .demo-section{padding:45px 0 112px}
+    .demo-panel{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:56px;border:1px solid #29362c;border-radius:30px;padding:54px;background:radial-gradient(circle at 84% 50%,rgba(74,222,128,.09),transparent 38%),#111513}
+    .demo-panel h2{font-size:clamp(32px,3.6vw,47px)}
+    .demo-panel p{color:#aeb8b1;font-size:15px;line-height:1.8}
+    .phase-picker{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}
+    .phase-picker button{cursor:pointer;border:1px solid #3d4540;background:rgba(255,255,255,.035);color:#e9edeb;border-radius:10px;padding:11px 14px;font-size:13px;font-weight:750;transition:background .2s,border-color .2s}
+    .phase-picker button[aria-pressed="true"]{border-color:var(--phase-color);background:#26362c;color:white}
+    .mini-panel{min-height:272px;background:#0b0e0c;border:1px solid #2d3b32;border-radius:23px;padding:29px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    .mini-panel-label{font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.16em;color:var(--phase-color)}
+    .mini-panel-time{font-weight:850;letter-spacing:-.06em;font-size:clamp(56px,6vw,85px);line-height:1.2;margin:15px 0}
+    .mini-panel-caption{font-size:13px;color:#aeb5b0}
+    .mini-track{display:flex;gap:5px;width:100%;margin-top:28px}.mini-track span{height:6px;border-radius:5px;flex:1;background:#28352c}.mini-track span:first-child{background:var(--phase-color)}
+    .faq{max-width:780px;margin:auto}.faq .section-head{text-align:center;margin:0 auto 40px}
+    details{border-bottom:1px solid #303633;padding:21px 3px}
+    summary{cursor:pointer;font-size:16px;font-weight:750;display:flex;justify-content:space-between;gap:20px;list-style:none}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:22px;color:var(--green);font-weight:500;line-height:1}
+    details[open] summary:after{content:"−"}
+    details p{font-size:14px;line-height:1.8;color:#aeb5b0;padding-right:40px;margin:15px 0 2px}
+    .final-cta{text-align:center;padding:88px 24px 96px;border-top:1px solid #29342c;background:radial-gradient(ellipse at center top,rgba(74,222,128,.09),transparent 65%)}
+    .final-cta h2{margin:14px 0 17px}.final-cta p{color:#abb5af;max-width:510px;margin:0 auto 27px}
+    .wait-pill{display:inline-flex;align-items:center;gap:10px;padding:15px 23px;border-radius:14px;background:#183321;border:1px solid #396a48;color:#c0f7d0;font-size:14px;font-weight:800}
+    .wait-pill svg{width:20px;height:20px;fill:currentColor}
+    footer{border-top:1px solid #252b27;padding:30px 0;color:#8d9891}
+    .footer-in{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap;font-size:12px}
+    .footer-in a:hover{color:white}.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+    @media(max-width:1050px){.hero-grid{gap:15px}.card-voice{left:-8px}.card-recovery{right:-8px}.device{transform:rotate(-3deg)}}
+    @media(max-width:820px){.nav-links{display:none}.hero{padding-top:76px}.hero-grid{grid-template-columns:1fr;gap:45px}.hero-copy{text-align:center}.hero-copy h1,.lede{margin-inline:auto}.hero-actions,.availability{justify-content:center}.hero-art{min-height:600px}.card-voice{left:calc(50% - 235px)}.card-recovery{right:calc(50% - 230px)}.strip-item{padding:20px}.steps{grid-template-columns:1fr}.demo-panel{grid-template-columns:1fr;padding:35px;gap:35px}.section{padding:82px 0}}
+    @media(max-width:580px){.wrap{width:min(calc(100% - 34px),var(--width))}.nav{height:68px}.brand{font-size:18px}.brand img{width:34px;height:34px}.nav-tag{font-size:10px;padding:8px 11px}.hero{padding-top:63px}.hero h1{font-size:clamp(49px,12vw,66px)}.lede{font-size:16px}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.hero-art{min-height:555px}.device{width:263px;min-height:533px;border-radius:42px}.screen{height:515px;padding:30px 14px 16px;border-radius:35px}.workout-name{margin-top:36px}.timer-ring{width:191px;height:191px;margin-top:23px;margin-bottom:19px}.time{font-size:45px}.mock-controls{margin-top:14px}.float-card{padding:10px 12px}.card-voice{left:0;top:100px}.card-recovery{right:0;bottom:84px}.preview-label{font-size:10px;bottom:-5px}.strip{grid-template-columns:1fr;margin-top:15px}.strip-item{padding:15px 21px}.strip-item:not(:last-child){border-right:0;border-bottom:1px solid var(--border)}.features{grid-template-columns:1fr}.feature{padding:26px;min-height:auto}.section-head{margin-bottom:30px}.demo-panel{padding:27px 21px}.phase-picker button{padding:10px 11px;font-size:12px}.section{padding:70px 0}.demo-section{padding-bottom:80px}.final-cta{padding:70px 20px}.footer-in{justify-content:center;text-align:center}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.feature,.phase-picker button{transition:none}}
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Navigazione principale">
+    <div class="wrap nav-in">
+      <a class="brand" href="#inizio" aria-label="FisioTimer, torna all'inizio"><img src="./favicon.svg" alt="" width="38" height="38">FisioTimer</a>
+      <div class="nav-links"><a href="#funzionalita">Funzionalità</a><a href="#come-funziona">Come funziona</a><a href="#domande">Domande frequenti</a></div>
+      <span class="nav-tag">In arrivo su Google Play</span>
+    </div>
+  </nav>
+
+  <header class="hero" id="inizio">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Il tuo allenamento, i tuoi tempi</span>
+        <h1>Ogni secondo.<span>Al tuo ritmo.</span></h1>
+        <p class="lede">Meno distrazioni, più movimento. Con FisioTimer personalizzi ogni fase dell'allenamento e segui il ritmo grazie a un timer chiaro e alla guida vocale.</p>
+        <div class="hero-actions">
+          <a class="btn btn-main" href="#funzionalita">Scopri FisioTimer <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+          <a class="btn btn-ghost" href="#come-funziona">Come funziona</a>
+        </div>
+        <p class="availability"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 2 15 10L3 22V2zm16.3 9.1 2.2-1.3c1-.6 1-2.1 0-2.7l-5-2.9-3 3 5.8 3.9zM13.5 16l3.1 3.1 4.9-2.9c1-.6 1-2.1 0-2.7l-2.2-1.3L13.5 16zM4.1 23c.4.1.8 0 1.3-.2l9.9-5.7-3.4-3.4L4.1 23z"/></svg> Android · Pubblicazione su Google Play in corso</p>
+      </div>
+      <div class="hero-art" aria-label="Anteprima illustrativa di un timer FisioTimer in fase di allenamento">
+        <div class="orb" aria-hidden="true"></div>
+        <div class="float-card card-voice" aria-hidden="true"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5Zm4.5 4a5 5 0 0 1 0 6M18 6a9 9 0 0 1 0 12"/></svg></div><div><strong>Guida vocale</strong><small>Attiva durante il timer</small></div></div>
+        <div class="device" aria-hidden="true">
+          <div class="screen">
+            <div class="camera"></div>
+            <div class="screen-header"><span>FISIOTIMER</span><span>···</span></div>
+            <div class="workout-name">Il mio allenamento</div>
+            <div class="workout-detail">Ciclo 1 di 3 &nbsp;·&nbsp; Set 2 di 4</div>
+            <div class="timer-ring"><div class="ring-inner"><div class="time" id="phone-time">00:40</div><div class="phase-name" id="phone-phase">ALLENAMENTO</div></div></div>
+            <div class="screen-progress"><span></span><span></span><span></span><span></span></div>
+            <div class="workout-detail">Tempo rimanente nel set</div>
+            <div class="mock-controls"><span class="small">↶</span><span class="play"><svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor"><rect x="7" y="5" width="3.5" height="14" rx="1.5"/><rect x="14" y="5" width="3.5" height="14" rx="1.5"/></svg></span><span class="small">↷</span></div>
+          </div>
+        </div>
+        <div class="float-card card-recovery" aria-hidden="true"><strong><span class="dot"></span> Recupero tra cicli</strong><small>Il tempo per ricaricarti</small></div>
+        <span class="preview-label">Anteprima grafica illustrativa</span>
+      </div>
+    </div>
+    <div class="wrap"><div class="strip" aria-label="Le tre fasi principali"><div class="strip-item"><span class="phase-dot" style="background:var(--green)"></span><div><strong>Allenamento</strong><p>Concentrati sul lavoro</p></div></div><div class="strip-item"><span class="phase-dot" style="background:var(--red)"></span><div><strong>Riposo</strong><p>Recupera tra i set</p></div></div><div class="strip-item"><span class="phase-dot" style="background:var(--yellow)"></span><div><strong>Recupero</strong><p>Riparti tra un ciclo e l'altro</p></div></div></div></div>
+  </header>
+
+  <main>
+    <section class="section" id="funzionalita"><div class="wrap">
+      <div class="section-head"><div class="kicker">Tutto al posto giusto</div><h2>Tu dai il massimo.<br>Al tempo ci pensiamo noi.</h2><p>Un timer flessibile per circuiti, esercizi a intervalli e sessioni costruite sul tuo ritmo.</p></div>
+      <div class="features">
+        <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg></div><h3>Intervalli su misura</h3><p>Decidi la durata di preparazione, allenamento, riposo e recupero. Ogni sessione segue i tuoi tempi.</p></article>
+        <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 14v-4m4 8V6m4 15V3m4 15V6m4 8v-4"/></svg></div><h3>La voce che ti guida</h3><p>Indicazioni vocali e conto alla rovescia ti accompagnano nei cambi di fase, così puoi restare concentrato sugli esercizi.</p></article>
+        <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.6 9A8 8 0 0 1 19 7l1 5M4 12l1 5a8 8 0 0 0 13.4-2"/></svg></div><h3>Set e cicli, senza confusione</h3><p>Ripeti i set all'interno di ogni ciclo e inserisci un recupero dedicato tra i cicli. La sequenza viene gestita automaticamente.</p></article>
+        <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5zM8 4v6h8V4M8 20v-7h8v7"/></svg></div><h3>I tuoi timer, sempre pronti</h3><p>Crea, salva e modifica allenamenti personalizzati per ritrovare velocemente la sessione giusta.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section alt" id="come-funziona"><div class="wrap">
+      <div class="section-head"><div class="kicker">Semplice, dall'inizio alla fine</div><h2>Preparati. Parti. Ripeti.</h2><p>Pochi passaggi per organizzare il tuo workout, senza complicazioni.</p></div>
+      <div class="steps"><article class="step"><div class="step-number">01 / CONFIGURA</div><h3>Scegli i tempi</h3><p>Imposta quanto durano le fasi di lavoro, riposo e recupero, più la preparazione iniziale.</p></article><article class="step"><div class="step-number">02 / ORGANIZZA</div><h3>Imposta set e cicli</h3><p>Scegli quanti set ripetere in ogni ciclo e quante volte ripetere il ciclo.</p></article><article class="step"><div class="step-number">03 / ALLENATI</div><h3>Segui il tuo ritmo</h3><p>Avvia il timer e lasciati guidare dalle fasi colorate e dagli avvisi vocali.</p></article></div>
+    </div></section>
+
+    <section class="demo-section"><div class="wrap"><div class="demo-panel" id="anteprima">
+      <div><div class="kicker">Un colpo d'occhio</div><h2>Ogni fase ha il suo colore.</h2><p>Verde quando ti alleni, rosso durante il riposo e giallo per il recupero tra cicli. Prova a cambiare fase in questa anteprima interattiva.</p><div class="phase-picker" role="group" aria-label="Seleziona una fase da visualizzare"><button type="button" data-phase="work" aria-pressed="true">Allenamento</button><button type="button" data-phase="rest" aria-pressed="false">Riposo</button><button type="button" data-phase="recovery" aria-pressed="false">Recupero</button></div></div>
+      <div class="mini-panel" aria-live="polite"><div class="mini-panel-label" id="mini-label">Allenamento</div><div class="mini-panel-time" id="mini-time">00:40</div><div class="mini-panel-caption" id="mini-caption">È il momento di dare il massimo.</div><div class="mini-track"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+    </div></div></section>
+
+    <section class="section" id="domande"><div class="wrap faq"><div class="section-head"><div class="kicker">Domande frequenti</div><h2>Tutto quello che vuoi sapere.</h2></div>
+      <details><summary>Quando sarà disponibile FisioTimer?</summary><p>FisioTimer è attualmente in fase di pubblicazione su Google Play. Il collegamento per scaricarla verrà aggiunto qui quando la pagina ufficiale dell'app sarà disponibile.</p></details>
+      <details><summary>Posso personalizzare le durate degli intervalli?</summary><p>Sì. Puoi impostare la preparazione iniziale, la durata dell'allenamento, il riposo tra i set, il recupero tra i cicli e il numero di set e cicli.</p></details>
+      <details><summary>Come funzionano set e cicli?</summary><p>Ogni ciclo contiene il numero di set che scegli. Il timer alterna allenamento e riposo tra i set; quando termina un ciclo, inserisce il recupero prima del ciclo successivo, se previsto.</p></details>
+      <details><summary>Posso usare una guida vocale?</summary><p>Sì, gli annunci vocali ti aiutano a seguire il conto alla rovescia e i cambi di fase. Puoi gestire la voce dalle impostazioni dell'app.</p></details>
+    </div></section>
+
+    <section class="final-cta" id="download"><div class="wrap"><div class="kicker">Pronto per il prossimo allenamento?</div><h2>Il tuo ritmo sta per arrivare.</h2><p>FisioTimer è in fase di pubblicazione per Android. Torna su questa pagina per trovare il collegamento ufficiale a Google Play.</p><span class="wait-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v20l18-10L3 2zm3.5 5.4L15.7 12 6.5 16.6V7.4z"/></svg> In arrivo su Google Play</span></div></section>
+  </main>
+
+  <footer><div class="wrap footer-in"><a href="https://protadev.com" aria-label="ProtaDev, sito dello sviluppatore">© 2026 ProtaDev · FisioTimer</a><div class="footer-links"><a href="https://protadev.com/fisiotimer/privacy-policy.html">Privacy Policy</a><a href="mailto:support.fisiotimer@protadev.com">Contattaci</a><a href="https://protadev.com">ProtaDev</a></div></div></footer>
+  <script>
+    (() => {
+      const phases = {
+        work: {color:'#4ade80',name:'Allenamento',time:'00:40',caption:'È il momento di dare il massimo.'},
+        rest: {color:'#fb7185',name:'Riposo',time:'00:20',caption:'Respira. Recupera. Si riparte.'},
+        recovery: {color:'#facc15',name:'Recupero',time:'01:00',caption:'Un momento di recupero tra i cicli.'}
+      };
+      const buttons = document.querySelectorAll('[data-phase]');
+      buttons.forEach(button => button.addEventListener('click', () => {
+        const phase = phases[button.dataset.phase];
+        if (!phase) return;
+        document.documentElement.style.setProperty('--phase-color', phase.color);
+        document.getElementById('mini-label').textContent = phase.name;
+        document.getElementById('mini-time').textContent = phase.time;
+        document.getElementById('mini-caption').textContent = phase.caption;
+        document.getElementById('phone-phase').textContent = phase.name.toUpperCase();
+        document.getElementById('phone-time').textContent = phase.time;
+        buttons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      }));
+    })();
+  </script>
+</body>
+</html>
