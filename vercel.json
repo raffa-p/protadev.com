@@ -1,25 +1,28 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
+      "src": "^/$",
       "has": [
         {
           "type": "host",
           "value": "fisiotimer.protadev.com"
         }
       ],
-      "destination": "/fisiotimer/index.html"
+      "dest": "/fisiotimer/index.html"
     },
     {
-      "source": "/:path*",
+      "src": "^/(.*)$",
       "has": [
         {
           "type": "host",
           "value": "fisiotimer.protadev.com"
         }
       ],
-      "destination": "/fisiotimer/:path*"
+      "dest": "/fisiotimer/$1"
+    },
+    {
+      "handle": "filesystem"
     }
   ]
 }
