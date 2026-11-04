@@ -1,245 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
-    <title>ProtaDev | Le mie App</title>
-    <style>
-        /* --- STILI BASE --- */
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --accent-hover: #2980b9;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --text-main: #333333;
-            --text-muted: #6c757d;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        /* --- HEADER --- */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: 1px;
-        }
-
-        /* --- SOCIAL LINKS --- */
-        .social-links {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.2rem;
-        }
-
-        .social-link {
-            color: white;
-            background-color: rgba(255, 255, 255, 0.1);
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .social-link:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-3px);
-        }
-
-        .social-link svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        /* --- MAIN CONTAINER E GALLERIA --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .gallery {
-            display: grid;
-            /* Crea colonne responsive che si adattano allo schermo */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        /* --- STILE DELLE CARD (LE TUE APP) --- */
-        .app-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .app-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .app-image {
-            width: 100%;
-            height: 220px;
-            background-color: #e9ecef;
-            object-fit: cover;
-            /* Sostituisci questo background con le tue immagini reali */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        .app-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .app-title {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.4rem;
-            color: var(--primary-color);
-        }
-
-        .app-description {
-            color: var(--text-muted);
-            flex-grow: 1;
-            margin-bottom: 1.5rem;
-        }
-
-        .app-btn {
-            display: inline-block;
-            text-align: center;
-            padding: 0.8rem 1.5rem;
-            background-color: var(--accent-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background-color 0.2s ease;
-        }
-
-        .app-btn:hover {
-            background-color: var(--accent-hover);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--primary-color);
-            color: white;
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101816">
+  <meta name="description" content="ProtaDev: app e progetti digitali sviluppati da Raffaele Prota. Scopri Gym Plus e FisioTimer, due strumenti pensati per l'allenamento e il benessere.">
+  <meta name="author" content="Raffaele Prota">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="ProtaDev">
+  <meta property="og:title" content="ProtaDev — Prodotti digitali, idee concrete">
+  <meta property="og:description" content="App e software sviluppati con attenzione ai dettagli. Scopri Gym Plus e FisioTimer.">
+  <meta property="og:url" content="https://protadev.com/">
+  <link rel="canonical" href="https://protadev.com/">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>ProtaDev — Sviluppo app e prodotti digitali</title>
 </head>
 <body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
-    <header>
-        <h1>ProtaDev</h1>
-        <div class="social-links">
-            <!-- App Store (Apple) -->
-            <a href="https://apps.apple.com/it/developer/raffaele-prota/id1895137214" target="_blank" class="social-link" aria-label="Apple Developer Page">
-                <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.3 48.6-.7 90.4-82.5 102.7-119.3-65.2-30.7-61.7-90-61.8-91.3zM243.6 86.8c16.3-25.4 29.5-54 29.5-86.8-28.5 1.1-62.5 19-81.2 44.6-15.6 20.6-31.2 49.3-28.6 81.2 31.3 2.4 64.1-13.6 80.3-39z"/></svg>
-            </a>
-            <!-- Google Play Store -->
-            <a href="https://play.google.com/store/apps/dev?id=123456789" target="_blank" class="social-link" aria-label="Google Play Developer Page">
-                <svg viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
-            </a>
-            <!-- GitHub -->
-            <a href="https://github.com/raffa-p" target="_blank" class="social-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            </a>
-            <!-- LinkedIn -->
-            <!-- <a href="https://linkedin.com/in/tuo-profilo" target="_blank" class="social-link" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1。729v20。542C0 23。227。79２ ２４ １。７７１ ２４h２０。４５１C２３。２ ２４ ２４ ２３。２２７ ２４ ２２。２７１V１。７２９C２４ 。７７４ ２３。２ ０ ２２。２２２ ０h。００３z"/></svg>
-            </a> -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#inizio" aria-label="ProtaDev, torna all'inizio">
+        <span class="brand-icon" aria-hidden="true">&lt;/&gt;</span>
+        <span>prota<span class="brand-emphasis">dev</span><span class="brand-point">.</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Navigazione principale">
+        <a href="#progetti">Progetti</a>
+        <a href="#approccio">Approccio</a>
+        <a href="#chi-sono">Chi sono</a>
+      </nav>
+      <a class="nav-cta" href="mailto:support@protadev.com">Contattami <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section id="inizio" class="hero" aria-labelledby="titolo-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-light" aria-hidden="true"></span> INDIE SOFTWARE STUDIO · ITALIA</p>
+          <h1 id="titolo-hero">Progetti digitali.<br><span>Idee concrete.</span></h1>
+          <p class="hero-subtitle">Progetto e sviluppo applicazioni con un obiettivo preciso: trasformare esigenze reali in strumenti semplici, utili e piacevoli da usare.</p>
+          <div class="hero-actions">
+            <a class="button button-lime" href="#progetti">Esplora i progetti <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="#chi-sono">Chi c'è dietro <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-meta" aria-label="Ambiti di sviluppo">
+            <span>Mobile</span>
+            <i aria-hidden="true"></i>
+            <span>Web</span>
+            <i aria-hidden="true"></i>
+            <span>UI &amp; UX</span>
+          </div>
         </div>
-    </header>
-
-    <main class="container">
-        <div class="gallery">
-            
-            <!-- FISIOTIMER -->
-            <article class="app-card">
-                <div class="app-image" style="background:#0e1c11;display:flex;align-items:center;justify-content:center;">
-                    <img src="./fisiotimer/favicon.svg" alt="Logo FisioTimer" width="112" height="112" style="width:112px;height:112px;object-fit:contain;border-radius:24px;">
-                </div>
-                <div class="app-content">
-                    <h2 class="app-title">FisioTimer</h2>
-                    <p class="app-description">Timer a intervalli per allenamenti personalizzati, con guida vocale, set e cicli. In arrivo su Google Play.</p>
-                    <a href="https://fisiotimer.protadev.com/" class="app-btn">Scopri FisioTimer</a>
-                </div>
-            </article>
-            <!-- FINE FISIOTIMER -->
-
-            <!-- INIZIO APP 1 -->
-            <article class="app-card">
-                <img src="./soccermanager/soccermanager_icon.png" alt="Logo Soccer Manager" class="app-image">
-                <div class="app-content">
-                    <h2 class="app-title">Soccer Manager</h2>
-                    <p class="app-description">Applicazione cross-platform per la gestione dei calcetti con gli amici.</p>
-                    <a href="./soccermanager/landing_page.html" class="app-btn">Scopri di più</a>
-                </div>
-            </article>
-            <!-- FINE APP 1 -->
-
-            <!-- INIZIO APP 2 -->
-            <article class="app-card">
-                <img src="./gym_plus/images/icon_image.png" alt="Logo Gym Plus" class="app-image">
-                <div class="app-content">
-                    <h2 class="app-title">Gym Plus</h2>
-                    <p class="app-description">Applicazione iOS per il monitoraggio degli allenamenti in palestra.</p>
-                    <a href="./gym_plus/app_landing.html" class="app-btn">Scopri di più</a>
-                </div>
-            </article>
-            <!-- FINE APP 2 -->
-
-            <!-- INIZIO APP 3 -->
-            <article class="app-card">
-                <div class="app-image">Immagine App 3 (600x400)</div>
-                <div class="app-content">
-                    <h2 class="app-title">Cinemax</h2>
-                    <p class="app-description">Applicazione iOS per tenere traccia delle tue serie e dei tuoi film preferiti.</p>
-                    <a href="app3/index.html" class="app-btn">Scopri di più</a>
-                </div>
-            </article>
-            <!-- FINE APP 3 -->
-
+        <div class="hero-showcase" aria-label="Anteprima delle applicazioni Gym Plus e FisioTimer">
+          <div class="showcase-grid" aria-hidden="true"></div>
+          <span class="showcase-label">BUILDING USEFUL THINGS / 2026</span>
+          <div class="showcase-phone">
+            <span class="showcase-speaker" aria-hidden="true"></span>
+            <img src="./gym_plus/images/body_score.jpeg" alt="Schermata di Gym Plus" width="270" height="520" fetchpriority="high">
+          </div>
+          <div class="floating-tile floating-gym">
+            <img src="./gym_plus/images/icon_image.png" alt="" width="48" height="48">
+            <span><strong>Gym Plus</strong><small>Fitness logbook</small></span>
+            <span class="floating-tile-arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="floating-tile floating-fisio">
+            <img src="./fisiotimer/favicon.svg" alt="" width="48" height="48">
+            <span><strong>FisioTimer</strong><small>Interval training</small></span>
+            <span class="floating-tile-arrow" aria-hidden="true">↗</span>
+          </div>
+          <div class="showcase-footer"><span>DESIGN · BUILD · IMPROVE</span><span aria-hidden="true">✳</span></div>
         </div>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 ProtaDev.</p>
-    </footer>
+    <div class="marquee-bar" aria-label="Tipologie di sviluppo">
+      <div class="container marquee-inner">
+        <span>PRODOTTI DIGITALI</span><span aria-hidden="true">✳</span>
+        <span>APP MOBILE</span><span aria-hidden="true">✳</span>
+        <span>ESPERIENZE WEB</span><span aria-hidden="true">✳</span>
+        <span>PROGETTAZIONE E SVILUPPO</span>
+      </div>
+    </div>
 
+    <section class="section projects-section" id="progetti" aria-labelledby="titolo-progetti">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <p class="section-index">01 / PROGETTI</p>
+            <h2 id="titolo-progetti">Le idee diventano<br><span>applicazioni.</span></h2>
+          </div>
+          <p>Due prodotti nati per accompagnare le attività di ogni giorno: allenarsi meglio, monitorare i progressi e gestire il proprio tempo.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-visual visual-gym">
+              <div class="visual-top"><span>01 / FITNESS &amp; BENESSERE</span><span class="visual-symbol" aria-hidden="true">↗</span></div>
+              <div class="gym-screens" aria-hidden="true">
+                <div class="gym-screen gym-screen-back"><img src="./gym_plus/images/diario.jpeg" alt="" loading="lazy"></div>
+                <div class="gym-screen gym-screen-front"><img src="./gym_plus/images/body_score.jpeg" alt="" loading="lazy"></div>
+              </div>
+              <div class="visual-bottom">GYM PLUS <span>FITNESS LOGBOOK</span></div>
+            </div>
+            <div class="product-content">
+              <div class="product-heading">
+                <div>
+                  <span class="product-category">APP IOS · FITNESS</span>
+                  <h3>Gym Plus</h3>
+                </div>
+                <span class="availability available"><span aria-hidden="true"></span> Su App Store</span>
+              </div>
+              <p>Un unico posto per tenere traccia di allenamenti, carichi e alimentazione, con una community dedicata a chi vuole migliorare ogni giorno.</p>
+              <div class="product-tags"><span>Allenamento</span><span>Alimentazione</span><span>iOS</span></div>
+              <div class="product-actions">
+                <a class="product-main-link" href="./gym_plus/app_landing.html">Scopri Gym Plus <span aria-hidden="true">↗</span></a>
+                <a class="product-secondary-link" href="https://apps.apple.com/it/app/gym-plus-fitness-logbook/id6766520098" target="_blank" rel="noopener noreferrer">App Store <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-visual visual-fisio">
+              <div class="visual-top"><span>02 / ALLENAMENTO A INTERVALLI</span><span class="visual-symbol" aria-hidden="true">↗</span></div>
+              <div class="interval-display" aria-label="Anteprima grafica illustrativa del timer FisioTimer">
+                <div class="interval-head"><img src="./fisiotimer/favicon.svg" alt="" width="28" height="28"><span>FISIOTIMER</span><span class="interval-dots" aria-hidden="true">•••</span></div>
+                <div class="interval-status">ALLENAMENTO</div>
+                <div class="interval-clock">00:45</div>
+                <div class="interval-track"><span></span></div>
+                <div class="interval-count"><span>SET 2 / 3</span><span>CICLO 1 / 2</span></div>
+              </div>
+              <div class="visual-bottom">FISIOTIMER <span>EVERY SECOND COUNTS</span></div>
+            </div>
+            <div class="product-content">
+              <div class="product-heading">
+                <div>
+                  <span class="product-category">APP MOBILE · TRAINING</span>
+                  <h3>FisioTimer</h3>
+                </div>
+                <span class="availability upcoming">In arrivo su Google Play</span>
+              </div>
+              <p>Il timer che si adatta ai tuoi allenamenti. Personalizza lavoro, riposo, recupero, serie e cicli, con una guida vocale che segue ogni fase.</p>
+              <div class="product-tags"><span>Interval timer</span><span>Guida vocale</span><span>Android</span></div>
+              <div class="product-actions">
+                <a class="product-main-link" href="https://fisiotimer.protadev.com/">Scopri FisioTimer <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="portfolio-note">Questa vetrina presenta i progetti attualmente seguiti. Per altri lavori e progetti universitari, visita il <a href="https://raffa-p.github.io/" target="_blank" rel="noopener noreferrer">portfolio personale ↗</a>.</p>
+      </div>
+    </section>
+
+    <section class="section approach-section" id="approccio" aria-labelledby="titolo-approccio">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <p class="section-index">02 / APPROCCIO</p>
+            <h2 id="titolo-approccio">Meno complicazioni.<br><span>Più attenzione.</span></h2>
+          </div>
+          <p>Un processo pragmatico, dall'idea alla release: prima le esigenze reali, poi l'interfaccia e la tecnologia più adatta a risolverle.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-item"><span class="process-number">01</span><h3>Capire il problema.</h3><p>Partire da un bisogno concreto e identificare le funzionalità che fanno davvero la differenza.</p></div>
+          <div class="process-item"><span class="process-number">02</span><h3>Progettare semplice.</h3><p>Creare percorsi chiari, interfacce essenziali e una struttura software pronta a crescere.</p></div>
+          <div class="process-item"><span class="process-number">03</span><h3>Costruire e migliorare.</h3><p>Sviluppare, testare e rifinire ogni dettaglio per offrire un'esperienza coerente.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="chi-sono" aria-labelledby="titolo-about">
+      <div class="container about-grid">
+        <div class="about-panel">
+          <div class="about-monogram" aria-hidden="true">RP<span>.</span></div>
+          <div class="about-panel-bottom"><span>RAFFAELE PROTA</span><span>SOFTWARE DEVELOPER</span></div>
+        </div>
+        <div class="about-copy">
+          <p class="section-index">03 / DIETRO PROTADEV</p>
+          <h2 id="titolo-about">Una persona.<br><span>Tante idee da realizzare.</span></h2>
+          <p>ProtaDev è il mio spazio dedicato allo sviluppo di applicazioni e prodotti digitali. Sono Raffaele Prota, studente di Ingegneria Informatica all'Università di Pisa: unisco studio, sperimentazione e progetti personali per trasformare quello che imparo in software concreto.</p>
+          <div class="about-links">
+            <a class="button button-light" href="https://raffa-p.github.io/cv/" target="_blank" rel="noopener noreferrer">Il mio CV <span aria-hidden="true">↗</span></a>
+            <a class="button button-line" href="https://github.com/raffa-p" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-line" href="https://raffa-p.github.io/" target="_blank" rel="noopener noreferrer">Portfolio <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contatti" aria-labelledby="titolo-contatti">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-index">04 / CONTATTI</p>
+          <h2 id="titolo-contatti">Hai un'idea?<br><span>Parliamone.</span></h2>
+          <p>Per richieste, collaborazioni o domande sulle applicazioni, puoi scrivermi direttamente.</p>
+          <a class="contact-email" href="mailto:support@protadev.com">support@protadev.com <span aria-hidden="true">↗</span></a>
+        </div>
+        <a class="contact-icon-link" href="mailto:support@protadev.com" aria-label="Invia una email a support@protadev.com"><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 ProtaDev · Progettato e sviluppato da Raffaele Prota.</span>
+      <div>
+        <a href="https://raffa-p.github.io/cv/" target="_blank" rel="noopener noreferrer">CV ↗</a>
+        <a href="https://github.com/raffa-p" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="mailto:support@protadev.com">Contatti ↗</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
