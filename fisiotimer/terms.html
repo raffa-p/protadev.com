@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Termini e condizioni di utilizzo di FisioTimer, l'app per allenamenti a intervalli con timer, set, cicli e guida vocale.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://fisiotimer.protadev.com/terms.html">
+  <link rel="icon" type="image/png" href="./logo.png">
+  <title>Termini di utilizzo — FisioTimer</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #09090b;
+      --surface: #161619;
+      --border: #333338;
+      --text: #f4f4f5;
+      --muted: #b3b3bd;
+      --green: #4ade80;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      margin: 0;
+      font: 16px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    a { color: var(--green); text-underline-offset: 4px; }
+    a:hover { color: #baf7ce; }
+    a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+    .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--border);
+      background: rgba(9, 9, 11, .94);
+      backdrop-filter: blur(14px);
+    }
+    .topbar-inner {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      color: var(--text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 19px;
+      font-weight: 800;
+    }
+    .brand img { width: 38px; height: 38px; border-radius: 10px; }
+    .back { color: var(--muted); font-size: 14px; text-decoration: none; }
+    .hero { padding: 78px 0 48px; border-bottom: 1px solid var(--border); }
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+    }
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      letter-spacing: -.055em;
+      line-height: 1.08;
+      margin: 18px 0 18px;
+    }
+    h1 span { color: var(--green); }
+    .intro { color: var(--muted); font-size: 18px; max-width: 700px; }
+    .updated {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: #d3d3d9;
+      font-size: 13px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 235px minmax(0, 1fr);
+      gap: 60px;
+      padding: 54px 0 90px;
+    }
+    .toc { position: sticky; top: 110px; align-self: start; }
+    .toc strong {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+    .toc a {
+      display: block;
+      padding: 8px 0;
+      text-decoration: none;
+      color: #b7b7be;
+      font-size: 14px;
+    }
+    .toc a:hover { color: var(--green); }
+    section { margin-bottom: 43px; scroll-margin-top: 100px; }
+    h2 { font-size: clamp(23px, 3vw, 30px); letter-spacing: -.03em; line-height: 1.25; }
+    p, li { color: #c4c4cc; }
+    li { padding-left: 4px; margin-bottom: 8px; }
+    li::marker { color: var(--green); }
+    ul { padding-left: 22px; }
+    .number { color: var(--green); font-size: 14px; vertical-align: middle; margin-right: 12px; }
+    .notice {
+      padding: 22px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+    .contact {
+      padding: 24px;
+      border-radius: 18px;
+      background: #102117;
+      border: 1px solid #31563b;
+    }
+    .contact p:last-child { margin-bottom: 0; }
+    footer { border-top: 1px solid var(--border); padding: 28px 0 42px; }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; font-size: 14px; color: var(--muted); }
+    @media (max-width: 760px) {
+      .hero { padding: 54px 0 38px; }
+      .layout { display: block; padding-top: 36px; }
+      .toc { position: static; padding-bottom: 28px; margin-bottom: 36px; border-bottom: 1px solid var(--border); }
+      .toc a { display: inline-block; margin-right: 18px; }
+      .back { font-size: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="/" aria-label="Torna al sito FisioTimer">
+        <img src="./logo.png" alt="" width="38" height="38">
+        FisioTimer
+      </a>
+      <a class="back" href="/">← Torna alla homepage</a>
+    </div>
+  </header>
+
+  <main class="shell" id="inizio">
+    <div class="hero">
+      <div class="eyebrow">Informazioni legali</div>
+      <h1>Termini di<br>utilizzo<span>.</span></h1>
+      <p class="intro">Questi termini disciplinano l'utilizzo dell'applicazione FisioTimer. Ti invitiamo a leggerli prima di utilizzare il servizio.</p>
+      <span class="updated">Ultimo aggiornamento: 9 novembre 2026</span>
+    </div>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Indice dei termini">
+        <strong>In questa pagina</strong>
+        <a href="#titolare">01 · Gestore del servizio</a>
+        <a href="#servizio">02 · Funzionalità</a>
+        <a href="#account">03 · Account</a>
+        <a href="#utilizzo">04 · Uso corretto</a>
+        <a href="#salute">05 · Salute e sicurezza</a>
+        <a href="#pubblicita">06 · Pubblicità</a>
+        <a href="#contenuti">07 · Proprietà intellettuale</a>
+        <a href="#disponibilita">08 · Disponibilità</a>
+        <a href="#privacy">09 · Privacy e cancellazione</a>
+        <a href="#responsabilita">10 · Responsabilità</a>
+        <a href="#modifiche">11 · Modifiche ai termini</a>
+        <a href="#legge">12 · Legge applicabile</a>
+        <a href="#contatti">13 · Contatti</a>
+      </nav>
+
+      <div class="content">
+        <section id="titolare">
+          <h2><span class="number">01</span>Gestore del servizio</h2>
+          <p>FisioTimer è un'applicazione sviluppata da <strong>Raffaele Prota (ProtaDev)</strong>, denominato di seguito “sviluppatore”.</p>
+          <p>Per informazioni, assistenza e comunicazioni relative all'applicazione è disponibile l'indirizzo <a href="mailto:support.fisiotimer@protadev.com">support.fisiotimer@protadev.com</a>.</p>
+          <p>Utilizzando FisioTimer, l'utente prende visione di questi termini, fermo restando quanto previsto dalle norme inderogabili applicabili a tutela dei consumatori.</p>
+        </section>
+
+        <section id="servizio">
+          <h2><span class="number">02</span>Descrizione di FisioTimer</h2>
+          <p>FisioTimer permette di organizzare sessioni di allenamento a intervalli, configurando la durata di preparazione, allenamento, riposo e recupero, nonché set e cicli. L'app può offrire istruzioni vocali, salvataggio degli allenamenti e preferenze personalizzate.</p>
+          <p>L'applicazione è distribuita tramite gli store e le piattaforme indicate nei relativi canali ufficiali. Le funzionalità disponibili possono variare in base al dispositivo, al sistema operativo e alla versione installata.</p>
+        </section>
+
+        <section id="account">
+          <h2><span class="number">03</span>Account e accesso</h2>
+          <p>Alcune funzionalità possono utilizzare un account tecnico o richiedere l'accesso tramite Google, secondo la versione dell'app. Quando utilizzi l'accesso Google, l'autenticazione è gestita dal relativo fornitore.</p>
+          <p>L'utente è responsabile della sicurezza del proprio dispositivo e delle credenziali dei servizi collegati. Non è consentito utilizzare account altrui senza autorizzazione.</p>
+          <p>La disinstallazione dell'app e la disconnessione dall'account non comportano necessariamente la cancellazione dei dati salvati. Le modalità di richiesta della cancellazione sono illustrate nella sezione <a href="#privacy">Privacy e cancellazione</a>.</p>
+        </section>
+
+        <section id="utilizzo">
+          <h2><span class="number">04</span>Utilizzo consentito</h2>
+          <p>FisioTimer è destinata a un utilizzo personale e lecito. L'utente si impegna a:</p>
+          <ul>
+            <li>utilizzare l'app senza violare leggi o diritti di terzi;</li>
+            <li>non tentare di compromettere la sicurezza dell'app, degli account o dei servizi collegati;</li>
+            <li>non aggirare le misure tecniche o utilizzare il servizio per attività fraudolente;</li>
+            <li>non inserire nei nomi degli allenamenti dati sensibili non necessari.</li>
+          </ul>
+          <p>Eventuali limitazioni o sospensioni dell'accesso per abusi saranno adottate in modo proporzionato e nel rispetto della normativa applicabile.</p>
+        </section>
+
+        <section id="salute">
+          <h2><span class="number">05</span>Salute e sicurezza</h2>
+          <div class="notice">
+            <p><strong>FisioTimer è uno strumento di temporizzazione, non un dispositivo medico.</strong> Non fornisce diagnosi, prescrizioni, valutazioni cliniche o programmi di allenamento personalizzati da professionisti sanitari.</p>
+            <p>Prima di svolgere attività fisica, valuta le tue condizioni e, quando opportuno, rivolgiti a un professionista qualificato. Interrompi l'attività se avverti sintomi anomali o malessere.</p>
+          </div>
+        </section>
+
+        <section id="pubblicita">
+          <h2><span class="number">06</span>Gratuità e pubblicità</h2>
+          <p>FisioTimer è attualmente concepita come app gratuita supportata dalla pubblicità. Quando attivi, gli annunci possono essere forniti tramite <strong>Google AdMob</strong> e relativi partner pubblicitari.</p>
+          <p>La visualizzazione e l'eventuale personalizzazione degli annunci dipendono dalle impostazioni, dai consensi applicabili e dalle tecnologie dei fornitori. Le modalità di trattamento dei dati sono descritte nella <a href="./privacy-policy.html">Privacy Policy</a>.</p>
+          <p>Eventuali funzionalità a pagamento introdotte in futuro saranno presentate con condizioni e prezzi prima dell'acquisto; nessun pagamento sarà addebitato soltanto in forza di questi termini.</p>
+        </section>
+
+        <section id="contenuti">
+          <h2><span class="number">07</span>Proprietà intellettuale</h2>
+          <p>Il nome, il marchio, il logo, l'interfaccia e il codice di FisioTimer, salvo componenti di terzi e licenze applicabili, sono protetti dalle norme sulla proprietà intellettuale.</p>
+          <p>L'installazione dell'app concede all'utente una licenza limitata, personale, non esclusiva e revocabile nei casi consentiti dalla legge, per utilizzare il software secondo la sua destinazione. I nomi e le configurazioni degli allenamenti inseriti dall'utente restano nella sua disponibilità.</p>
+        </section>
+
+        <section id="disponibilita">
+          <h2><span class="number">08</span>Disponibilità e aggiornamenti</h2>
+          <p>Lo sviluppatore può rilasciare aggiornamenti, correggere errori o modificare funzionalità per ragioni tecniche, di sicurezza o di evoluzione del servizio.</p>
+          <p>Alcune operazioni potrebbero richiedere una connessione Internet, per esempio l'autenticazione e la sincronizzazione dei dati. Non viene garantita l'assenza assoluta di interruzioni, salvo i diritti inderogabili previsti dalla legge.</p>
+        </section>
+
+        <section id="privacy">
+          <h2><span class="number">09</span>Privacy e cancellazione dell'account</h2>
+          <p>Il trattamento dei dati personali è disciplinato dalla <a href="./privacy-policy.html">Privacy Policy di FisioTimer</a>, che descrive le finalità, i fornitori e i diritti degli interessati.</p>
+          <p>Per chiedere la cancellazione dell'account e dei dati associati, puoi utilizzare la funzione eventualmente disponibile nell'app oppure scrivere a <a href="mailto:support.fisiotimer@protadev.com?subject=Richiesta%20cancellazione%20account%20FisioTimer">support.fisiotimer@protadev.com</a>, indicando che si tratta di FisioTimer.</p>
+          <p>La richiesta sarà gestita secondo le norme applicabili. Alcuni dati potrebbero essere conservati soltanto quando sussista un obbligo di legge o un'altra valida ragione giuridica, come meglio precisato nell'informativa privacy.</p>
+        </section>
+
+        <section id="responsabilita">
+          <h2><span class="number">10</span>Responsabilità</h2>
+          <p>L'utente è responsabile della scelta e dell'esecuzione dei propri esercizi, delle condizioni in cui si allena e dell'utilizzo corretto del timer.</p>
+          <p>Nei limiti consentiti dalla legge, lo sviluppatore non risponde di conseguenze derivanti da un uso improprio dell'app o da circostanze estranee al suo controllo. Nessuna disposizione di questi termini esclude o limita responsabilità che non possono essere escluse o limitate per legge, né pregiudica le garanzie e i diritti inderogabili dei consumatori.</p>
+        </section>
+
+        <section id="modifiche">
+          <h2><span class="number">11</span>Modifiche ai termini</h2>
+          <p>Questi termini possono essere aggiornati per riflettere modifiche all'app o nuove disposizioni normative. La versione in vigore sarà pubblicata su questa pagina, con la data dell'ultimo aggiornamento.</p>
+          <p>Quando richiesto dalla legge, eventuali modifiche sostanziali saranno comunicate con modalità adeguate e nel rispetto dei diritti dell'utente.</p>
+        </section>
+
+        <section id="legge">
+          <h2><span class="number">12</span>Legge applicabile</h2>
+          <p>I presenti termini sono disciplinati dalla legge italiana, fatti salvi i diritti inderogabili riconosciuti ai consumatori dalle norme applicabili nel loro Paese di residenza abituale. Per eventuali controversie si applicano le regole di competenza previste dalla legge.</p>
+        </section>
+
+        <section id="contatti">
+          <h2><span class="number">13</span>Contatti</h2>
+          <div class="contact">
+            <p>Per informazioni sui termini, assistenza o richieste relative al tuo account:</p>
+            <p><strong>ProtaDev — FisioTimer</strong><br>
+              <a href="mailto:support.fisiotimer@protadev.com">support.fisiotimer@protadev.com</a></p>
+            <p>Sito web: <a href="https://fisiotimer.protadev.com/">fisiotimer.protadev.com</a></p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <span>© 2026 FisioTimer · Termini di utilizzo</span>
+      <span><a href="./privacy-policy.html">Privacy Policy</a> · <a href="https://protadev.com/">ProtaDev</a></span>
+    </div>
+  </footer>
+</body>
+</html>
